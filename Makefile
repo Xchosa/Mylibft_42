@@ -6,7 +6,7 @@
 #    By: poverbec <poverbec@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/05 13:36:21 by poverbec          #+#    #+#              #
-#    Updated: 2025/03/05 13:36:24 by poverbec         ###   ########.fr        #
+#    Updated: 2025/03/05 14:02:38 by poverbec         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ INCLUDE_DIR = ./include
 CFLAGS = -Wall -Wextra -Werror -g -I$(INCLUDE_DIR)
 
 # --------------------SOURCES ---------------- #
-VPATH = ./libft ./printf ./get_next_line
+VPATH = ./libft ./printf ./gnl
 MY_SOURCES_libft = ft_atoi.c	\
 			ft_atol.c \
 			ft_isalpha.c \
@@ -101,6 +101,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	@echo "$(BGreen) \n Storing object file $(NAME) $(Color_Off)"
 	$(AR) -rcs $(NAME) $(OBJECTS)
+	@echo "$(BGreen) \n Compiling finished $(Color_Off)"
 
 
 
